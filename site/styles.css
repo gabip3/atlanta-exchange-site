@@ -68,7 +68,7 @@ p { margin: 0 0 1em; }
 }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 88px; }
 .nav__logo img { width: 240px; }
-@media (max-width: 520px) { .nav__logo img { width: 190px; } }
+@media (max-width: 520px) { .nav__logo img { width: 250px; } }
 .nav__menu { display: flex; align-items: center; gap: 6px; }
 .nav__menu a:not(.btn) {
   text-decoration: none; font-weight: 600; color: var(--navy-700);
