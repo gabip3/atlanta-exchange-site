@@ -23,6 +23,8 @@ const cartoes = servicos.map(s => `        <a class="card card--link" href="serv
           <span class="card__more">Saiba mais <span aria-hidden="true">→</span></span>
         </a>`).join('\n');
 home = home.replace(/(<!-- SERVICOS:INICIO[^>]*-->)[\s\S]*?(<!-- SERVICOS:FIM -->)/, `$1\n${cartoes}\n$2`);
+const rodape = servicos.map(s => `        <li><a href="servicos/${s.slug}.html">${esc(s.nome)}</a></li>`).join('\n');
+home = home.replace(/(<!-- RODAPE-SERVICOS:INICIO -->)[\s\S]*?(<!-- RODAPE-SERVICOS:FIM -->)/, `$1\n${rodape}\n$2`);
 fs.writeFileSync(path.join(raiz, 'index.html'), home);
 
 // ---- 2. Partes compartilhadas (menu, rodapé, WhatsApp, ícone) tiradas da home ----
@@ -30,7 +32,8 @@ const pega = (ini, fim) => home.slice(home.indexOf(ini), home.indexOf(fim, home.
 const sub = html => html
   .replace(/href="#top"/g, 'href="../"')
   .replace(/href="#/g, 'href="../#')
-  .replace(/src="img\//g, 'src="../img/');
+  .replace(/src="img\//g, 'src="../img/')
+  .replace(/href="servicos\//g, 'href="../servicos/');
 const header = sub(pega('<header class="nav"', '</header>'));
 const footer = sub(pega('<footer class="footer">', '</footer>'));
 const waFloat = pega('<a href="https://wa.me/16787700385" class="wa-float"', '</a>');
@@ -42,30 +45,57 @@ fs.mkdirSync(path.join(raiz, 'servicos'), { recursive: true });
 for (const s of servicos) {
   const url = `${SITE}/servicos/${s.slug}.html`;
   const outros = servicos.filter(o => o !== s);
-  const faqLd = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: s.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
-  };
+  const titulo = `${s.seo} | Atlanta Exchange`;
+  const descricao = `${s.resumo} Atendimento em português em Marietta, GA.`;
+  const ld = [
+    {
+      '@context': 'https://schema.org', '@type': 'Service',
+      name: s.nome, description: s.resumo, url,
+      image: `${SITE}/img/servicos/${s.slug}.jpg`,
+      areaServed: [{ '@type': 'State', name: 'Georgia' }, { '@type': 'City', name: 'Atlanta' }],
+      availableLanguage: ['pt-BR', 'en'],
+      provider: { '@type': 'FinancialService', '@id': `${SITE}/#empresa`, name: 'Atlanta Exchange LLC', telephone: '+1-678-382-9799' },
+    },
+    {
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Serviços', item: `${SITE}/#servicos` },
+        { '@type': 'ListItem', position: 3, name: s.nome, item: url },
+      ],
+    },
+    {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: s.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+    },
+  ];
 
   const html = `<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(s.nome)} em Atlanta | Atlanta Exchange LLC</title>
-  <meta name="description" content="${esc(s.resumo)} Atendimento em português em Marietta, GA.">
+  <title>${esc(titulo)}</title>
+  <meta name="description" content="${esc(descricao)}">
   <link rel="canonical" href="${url}">
+  <meta name="theme-color" content="#0a2540">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="${esc(s.nome)} | Atlanta Exchange">
-  <meta property="og:description" content="${esc(s.resumo)}">
-  <meta property="og:image" content="${SITE}/img/hero.jpg">
+  <meta property="og:site_name" content="Atlanta Exchange">
+  <meta property="og:url" content="${url}">
+  <meta property="og:title" content="${esc(titulo)}">
+  <meta property="og:description" content="${esc(descricao)}">
+  <meta property="og:image" content="${SITE}/img/servicos/${s.slug}.jpg">
+  <meta property="og:image:alt" content="${esc(s.foto)}">
   <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preload" as="image" href="../img/servicos/${s.slug}.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
-  <script type="application/ld+json">${JSON.stringify(faqLd)}</script>
+  <script type="application/ld+json">${JSON.stringify(ld)}</script>
 </head>
 <body>
 
@@ -169,6 +199,6 @@ ${waFloat}
 // ---- 4. sitemap.xml ----
 const urls = ['/', ...servicos.map(s => `/servicos/${s.slug}.html`)];
 fs.writeFileSync(path.join(raiz, 'sitemap.xml'),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${SITE}${u}</loc></url>`).join('\n')}\n</urlset>\n`);
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${SITE}${u}</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 
 console.log(`OK: ${servicos.length} páginas geradas em site/servicos/, cartões da home e sitemap.xml atualizados.`);

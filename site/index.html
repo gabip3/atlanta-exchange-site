@@ -3,15 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atlanta Exchange LLC | Central de Serviços para Brasileiros em Atlanta</title>
-  <meta name="description" content="Há mais de 20 anos servindo a comunidade brasileira em Atlanta: envio de PIX e dinheiro ao Brasil, empréstimos, seguros, abertura de empresas, DOT para construção, Tax ID, imposto de renda e consultoria.">
+  <title>Atlanta Exchange | PIX, Remessas, Seguros, Tax e Empresas para Brasileiros em Atlanta</title>
+  <meta name="description" content="Envio de PIX e dinheiro para o Brasil, seguros, abertura de LLC, imposto de renda, ITIN, USDOT e empréstimos. Há mais de 20 anos atendendo brasileiros em Atlanta, em português. Marietta, GA.">
   <link rel="canonical" href="https://www.atlantaexchangellc.com/">
+  <meta name="theme-color" content="#0a2540">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Atlanta Exchange LLC">
-  <meta property="og:description" content="A central de serviços mais completa para brasileiros em Atlanta.">
-  <meta property="og:image" content="https://www.atlantaexchangellc.com/img/hero.jpg">
+  <meta property="og:site_name" content="Atlanta Exchange">
+  <meta property="og:url" content="https://www.atlantaexchangellc.com/">
+  <meta property="og:title" content="Atlanta Exchange | Tudo que você precisa, em um só lugar">
+  <meta property="og:description" content="PIX, remessas, seguros, empresas, Tax e DOT. Há mais de 20 anos servindo brasileiros em Atlanta, em português.">
+  <meta property="og:image" content="https://www.atlantaexchangellc.com/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Atlanta Exchange: tudo que você precisa, em um só lugar">
   <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preload" as="image" href="img/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,11 +29,16 @@
   {
     "@context": "https://schema.org",
     "@type": "FinancialService",
+    "@id": "https://www.atlantaexchangellc.com/#empresa",
     "name": "Atlanta Exchange LLC",
+    "description": "Central de serviços para brasileiros em Atlanta: envio de PIX e dinheiro, seguros, abertura de empresas, imposto de renda, ITIN, USDOT e empréstimos.",
+    "knowsLanguage": ["pt-BR", "en"],
+    "areaServed": [{"@type": "City", "name": "Atlanta"}, {"@type": "City", "name": "Marietta"}, {"@type": "State", "name": "Georgia"}],
     "url": "https://www.atlantaexchangellc.com/",
     "logo": "https://www.atlantaexchangellc.com/img/logo.png",
-    "image": "https://www.atlantaexchangellc.com/img/hero.jpg",
+    "image": "https://www.atlantaexchangellc.com/img/og-image.jpg",
     "telephone": "+1-678-382-9799",
+    "contactPoint": [{"@type": "ContactPoint", "telephone": "+1-678-770-0385", "contactType": "customer service", "availableLanguage": ["Portuguese", "English"]}],
     "email": "luciano@atlantaexchangellc.com",
     "address": {
       "@type": "PostalAddress",
@@ -219,6 +233,17 @@
     </div>
   </section>
 
+  <!-- CHAMADA -->
+  <section class="cta-band cta-band--home">
+    <div class="wrap cta-band__inner">
+      <div>
+        <h2>Precisa resolver algo hoje?</h2>
+        <p>Fale com a gente agora pelo WhatsApp. Atendimento em português, sem enrolação.</p>
+      </div>
+      <a href="https://wa.me/16787700385?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento." class="btn btn--wa" target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg> Chamar no WhatsApp</a>
+    </div>
+  </section>
+
   <!-- CONTATO -->
   <section class="section section--tint" id="contato">
     <div class="wrap contact">
@@ -252,7 +277,8 @@
 
       <form class="form" id="contact-form" novalidate>
         <h3>Envie sua mensagem</h3>
-        <p class="form__note">Ao enviar, abrimos o WhatsApp com sua mensagem pronta.</p>
+        <p class="form__note">Respondemos rapidinho, em português.</p>
+        <input type="checkbox" name="botcheck" class="form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form__row">
           <label>Nome*<input name="nome" required autocomplete="given-name"></label>
           <label>Sobrenome*<input name="sobrenome" required autocomplete="family-name"></label>
@@ -278,7 +304,11 @@
         </label>
         <label>Mensagem<textarea name="mensagem" rows="4"></textarea></label>
         <p class="form__error" role="alert" hidden>Preencha os campos obrigatórios (*).</p>
-        <button type="submit" class="btn btn--wa btn--block"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg> Enviar pelo WhatsApp</button>
+        <button type="submit" class="btn btn--block" data-submit>Enviar mensagem</button>
+        <div class="form__success" role="status" hidden>
+          <strong>Mensagem enviada!</strong>
+          <p>Obrigado pelo contato. Vamos responder em breve. Se for urgente, chame no <a href="https://wa.me/16787700385" target="_blank" rel="noopener">WhatsApp</a>.</p>
+        </div>
       </form>
     </div>
 
@@ -291,9 +321,12 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap footer__inner">
-    <img src="img/logo-white.png" alt="Atlanta Exchange" width="230" height="54" loading="lazy">
-    <nav class="footer__social" aria-label="Redes sociais">
+  <div class="footer__skyline" aria-hidden="true"></div>
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <img src="img/logo-white.png" alt="Atlanta Exchange" width="230" height="54" loading="lazy">
+      <p>A central de serviços mais completa para brasileiros em Atlanta. Há mais de 20 anos facilitando a vida de quem vive na América.</p>
+      <nav class="footer__social" aria-label="Redes sociais">
       <a href="https://www.instagram.com/atlantaexchangellc" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
       </a>
@@ -304,7 +337,44 @@
         <svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
       </a>
     </nav>
-    <p class="footer__copy">© <span id="year">2026</span> Atlanta Exchange LLC · Marietta, GA</p>
+    </div>
+    <nav class="footer__col" aria-label="Serviços">
+      <h2>Serviços</h2>
+      <ul>
+<!-- RODAPE-SERVICOS:INICIO -->
+        <li><a href="servicos/envio-de-pix.html">Envio de PIX</a></li>
+        <li><a href="servicos/envio-de-dinheiro.html">Envio de Dinheiro</a></li>
+        <li><a href="servicos/emprestimos.html">Empréstimos</a></li>
+        <li><a href="servicos/seguros.html">Seguros</a></li>
+        <li><a href="servicos/abertura-de-empresas.html">Abertura de Empresas</a></li>
+        <li><a href="servicos/tax-income-tax-id.html">Tax Income / Tax ID</a></li>
+        <li><a href="servicos/dot-usdot.html">DOT (USDOT Number)</a></li>
+        <li><a href="servicos/auditorias.html">Auditorias</a></li>
+        <li><a href="servicos/consultoria-de-negocios.html">Consultoria de Negócios</a></li>
+<!-- RODAPE-SERVICOS:FIM -->
+      </ul>
+    </nav>
+    <div class="footer__col">
+      <h2>Contato</h2>
+      <ul>
+        <li><a href="https://maps.google.com/?q=1695+Lower+Roswell+Rd+Suite+100,+Marietta,+GA+30068" target="_blank" rel="noopener">1695 Lower Roswell Rd, Suite 100<br>Marietta, GA 30068</a></li>
+        <li><a href="tel:+16783829799">(678) 382-9799</a></li>
+        <li><a href="https://wa.me/16787700385" target="_blank" rel="noopener">WhatsApp (678) 770-0385</a></li>
+        <li><a href="mailto:luciano@atlantaexchangellc.com">luciano@atlantaexchangellc.com</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h2>Horários</h2>
+      <ul class="footer__hours">
+        <li><span>Seg a sex</span> 12pm às 8pm</li>
+        <li><span>Sábado</span> 10am às 3pm</li>
+        <li><span>Domingo</span> Fechado</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© <span id="year">2026</span> Atlanta Exchange LLC · Marietta, GA</p>
+    <p>Atendimento em português</p>
   </div>
 </footer>
 

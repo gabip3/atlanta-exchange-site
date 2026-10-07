@@ -15,6 +15,7 @@
 export const servicos = [
   {
     slug: 'envio-de-pix',
+    seo: 'Envio de PIX para o Brasil em Atlanta, GA',
     foto: 'Mulher sorrindo enquanto faz um pagamento pelo celular',
     nome: 'Envio de PIX',
     resumo: 'Mande dinheiro dos EUA para qualquer chave PIX no Brasil, com cotação clara antes de fechar.',
@@ -51,6 +52,7 @@ export const servicos = [
   },
   {
     slug: 'envio-de-dinheiro',
+    seo: 'Envio de Dinheiro para o Brasil em Atlanta, GA',
     foto: 'Notas de cem dólares',
     nome: 'Envio de Dinheiro',
     resumo: 'Remessas internacionais para conta bancária no Brasil e em outros países, com recibo e acompanhamento.',
@@ -86,6 +88,7 @@ export const servicos = [
   },
   {
     slug: 'emprestimos',
+    seo: 'Empréstimos e Financiamento com ITIN em Atlanta, GA',
     foto: 'Entrega da chave de um carro financiado',
     nome: 'Empréstimos',
     resumo: 'Empréstimo pessoal, financiamento de veículo e crédito para empresa, com SSN ou ITIN.',
@@ -121,6 +124,7 @@ export const servicos = [
   },
   {
     slug: 'seguros',
+    seo: 'Seguro de Carro, Casa e Empresa em Atlanta, GA',
     foto: 'Pai sorrindo com os dois filhos em frente de casa',
     nome: 'Seguros',
     resumo: 'Seguro de carro, casa, vida e empresa, incluindo General Liability e Workers’ Comp para construção.',
@@ -159,6 +163,7 @@ export const servicos = [
   },
   {
     slug: 'abertura-de-empresas',
+    seo: 'Abertura de LLC na Geórgia para Brasileiros',
     foto: 'Empreendedora atendendo cliente no balcão do seu negócio',
     nome: 'Abertura de Empresas',
     resumo: 'Abra sua LLC na Geórgia e mantenha tudo em dia: EIN, Registered Agent e Annual Registration.',
@@ -197,6 +202,7 @@ export const servicos = [
   },
   {
     slug: 'tax-income-tax-id',
+    seo: 'Imposto de Renda (Tax Return) e ITIN em Atlanta, GA',
     foto: 'Pessoa preenchendo o formulário 1040 do imposto de renda',
     nome: 'Tax Income / Tax ID',
     resumo: 'Imposto de renda (Tax Return) pessoal e da empresa, e emissão ou renovação de ITIN.',
@@ -236,6 +242,7 @@ export const servicos = [
   },
   {
     slug: 'dot-usdot',
+    seo: 'USDOT para Empresas de Construção na Geórgia',
     foto: 'Caminhonete puxando trailer com trator de obra',
     nome: 'DOT (USDOT Number)',
     resumo: 'USDOT para empresas de construção: registro, renovação (MCS-150), UCR e auditorias do DOT.',
@@ -277,6 +284,7 @@ export const servicos = [
   },
   {
     slug: 'auditorias',
+    seo: 'Auditoria de Seguro, DOT e IRS em Atlanta, GA',
     foto: 'Documentos fiscais e calculadora sobre a mesa',
     nome: 'Auditorias',
     resumo: 'Auditoria do seguro (Workers’ Comp e General Liability), do DOT ou carta do IRS? A gente organiza tudo.',
@@ -314,6 +322,7 @@ export const servicos = [
   },
   {
     slug: 'consultoria-de-negocios',
+    seo: 'Consultoria de Negócios para Brasileiros em Atlanta',
     foto: 'Aperto de mãos em reunião de negócios',
     nome: 'Consultoria de Negócios',
     resumo: 'Orientação para quem quer empreender ou crescer o negócio nos Estados Unidos, do jeito certo.',
