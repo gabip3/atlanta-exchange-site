@@ -515,3 +515,50 @@ p { margin: 0 0 1em; }
   .hero__inner > * { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ===== Ajustes finos para celular ===== */
+@media (max-width: 700px) {
+  /* Topo: foto visível em cima, texto embaixo */
+  .hero { padding: 250px 0 48px; align-items: flex-end; }
+  .hero__bg {
+    background:
+      linear-gradient(180deg, rgba(6,26,46,0) 0px, rgba(6,26,46,.15) 120px, rgba(6,26,46,.9) 250px, var(--navy-900) 320px),
+      url("img/hero.jpg") center top / 100% auto no-repeat,
+      var(--navy-900);
+  }
+  .hero h1 { font-size: 2.3rem; }
+  .hero__lead { font-size: 1.02rem; margin-bottom: 26px; }
+  .hero__cta { flex-direction: column; gap: 12px; margin-bottom: 36px; }
+  .hero__cta .btn { width: 100%; }
+  .hero__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .hero__stats li { padding-left: 10px; }
+  .hero__stats strong { font-size: 1.35rem; }
+  .hero__stats span { font-size: .74rem; line-height: 1.3; }
+
+  /* Cartões de serviço compactos: ícone ao lado do texto */
+  .services { gap: 12px; }
+  .card--link {
+    display: grid; grid-template-columns: 46px 1fr; column-gap: 16px; align-items: start;
+    padding: 18px 18px;
+  }
+  .card--link .card__icon { grid-row: span 3; width: 46px; height: 46px; margin: 0; }
+  .card--link h3 { margin: 2px 0 4px; font-size: 1.02rem; }
+  .card--link p { font-size: .9rem; line-height: 1.5; }
+  .card--link .card__more { margin-top: 8px; font-size: .85rem; }
+
+  /* Foto do PIX mais baixa */
+  .split__media img { aspect-ratio: 4 / 3; max-height: none; object-position: center 25%; }
+
+  /* Marcas d'água só no computador */
+  .cta-band--home::after, #remessa::before { display: none; }
+  .cta-band .btn { width: 100%; }
+  .cta-band { padding: 48px 0; }
+
+  .values { gap: 14px; }
+  .value { padding: 24px 22px; }
+  .section__head { margin-bottom: 36px; }
+
+  /* Botão flutuante um pouco menor */
+  .wa-float { width: 54px; height: 54px; right: 14px; bottom: 14px; }
+  .wa-float svg { width: 26px; height: 26px; }
+}
