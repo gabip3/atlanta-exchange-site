@@ -1,0 +1,6 @@
+# Só o site e o gerador vão para o repositório. Todo o resto (artes, PDFs, documentos) fica fora.
+/*
+!/site/
+!/ferramentas/
+!/README.md
+!/.gitignore
