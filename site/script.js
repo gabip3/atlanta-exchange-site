@@ -16,7 +16,7 @@ if (year) year.textContent = new Date().getFullYear();
 // Formulário de contato
 // Com a chave do Web3Forms preenchida, a mensagem vai para o e-mail do Luciano.
 // Sem a chave, o formulário abre o WhatsApp com a mensagem pronta.
-const WEB3FORMS_KEY = ''; // cole aqui a Access Key do web3forms.com
+const WEB3FORMS_KEY = '01d5ed19-c800-45f1-b4d2-0f80b5a92c48'; // Access Key do web3forms.com (pode ser pública)
 const WHATSAPP = '16787700385';
 const form = document.getElementById('contact-form');
 
