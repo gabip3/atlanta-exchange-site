@@ -1,7 +1,7 @@
 // Conteúdo de cada serviço. Edite aqui e rode:  node ferramentas/gerar-servicos.mjs
 // Cada serviço vira uma página em site/servicos/<slug>.html e um cartão na home.
 //
-// Regras conferidas em fontes oficiais (out/2026) — revisar todo ano:
+// Regras conferidas em fontes oficiais (out/2026): revisar todo ano:
 //  - FMCSA: USDOT p/ veículos 10.001+ lbs (interestadual); Geórgia exige USDOT também p/ intraestadual >10.000 lbs (GA DPS)
 //  - FMCSA: MCS-150 a cada 2 anos (49 CFR 390.19); multa até $1.000/dia, máx. $10.000; número desativado
 //  - UCR: anual p/ transportadores interestaduais, inclusive "private carriers"
@@ -10,7 +10,7 @@
 //  - GA: seguro auto mínimo 25/50/25
 //  - IRS: 1040/Schedule C até 15/abr; 1065 até 15/mar; 4868 estende entrega até 15/out (não o pagamento)
 //  - IRS: ITIN expira se não usado em declaração por 3 anos seguidos
-//  - CFPB: remessa — divulgar câmbio, tarifas e valor recebido; cancelamento em 30 min
+//  - CFPB: remessa: divulgar câmbio, tarifas e valor recebido; cancelamento em 30 min
 
 export const servicos = [
   {
@@ -20,7 +20,7 @@ export const servicos = [
     resumo: 'Mande dinheiro dos EUA para qualquer chave PIX no Brasil, com cotação clara antes de fechar.',
     icone: '<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M14.5 9.5h-3.2a1.5 1.5 0 0 0 0 3h1.4a1.5 1.5 0 0 1 0 3H9.5M12 8v1.5M12 15.5V17M5.5 9v.01M18.5 15v.01"/>',
     titulo: 'Envie PIX para o Brasil direto de Atlanta',
-    lead: 'Você paga aqui em dólar e o valor cai em reais na chave PIX de quem você escolher — com a cotação, as tarifas e o valor final informados antes de você confirmar.',
+    lead: 'Você paga aqui em dólar e o valor cai em reais na chave PIX de quem você escolher, com a cotação, as tarifas e o valor final informados antes de você confirmar.',
     inclui: [
       'Envio para qualquer chave PIX: CPF, CNPJ, e-mail, celular ou chave aleatória',
       'Taxa de câmbio, tarifas e valor exato em reais informados antes do pagamento',
@@ -45,7 +45,7 @@ export const servicos = [
       ['Por que pedem documento?', 'Toda empresa que envia dinheiro para o exterior nos EUA é obrigada por lei a identificar o cliente. Isso protege você e quem recebe.'],
     ],
     fontes: [
-      ['CFPB — Envio de dinheiro ao exterior (em espanhol/inglês)', 'https://www.consumerfinance.gov/consumer-tools/sending-money/'],
+      ['CFPB: Envio de dinheiro ao exterior (em espanhol/inglês)', 'https://www.consumerfinance.gov/consumer-tools/sending-money/'],
     ],
     whats: 'Olá! Quero fazer um envio de PIX para o Brasil.',
   },
@@ -80,7 +80,7 @@ export const servicos = [
       ['Existe limite de valor?', 'Depende do tipo de envio e do destino. Fale com a gente e informamos as condições.'],
     ],
     fontes: [
-      ['CFPB — Envio de dinheiro ao exterior', 'https://www.consumerfinance.gov/consumer-tools/sending-money/'],
+      ['CFPB: Envio de dinheiro ao exterior', 'https://www.consumerfinance.gov/consumer-tools/sending-money/'],
     ],
     whats: 'Olá! Quero fazer um envio de dinheiro.',
   },
@@ -91,7 +91,7 @@ export const servicos = [
     resumo: 'Empréstimo pessoal, financiamento de veículo e crédito para empresa, com SSN ou ITIN.',
     icone: '<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/>',
     titulo: 'Empréstimos e financiamentos com orientação de verdade',
-    lead: 'Precisa de dinheiro para um carro, uma caminhonete de trabalho ou para o seu negócio? Analisamos o seu perfil e mostramos as opções que fazem sentido — inclusive para quem tem ITIN.',
+    lead: 'Precisa de dinheiro para um carro, uma caminhonete de trabalho ou para o seu negócio? Analisamos o seu perfil e mostramos as opções que fazem sentido, inclusive para quem tem ITIN.',
     inclui: [
       'Empréstimo pessoal',
       'Financiamento de carros, caminhonetes e equipamentos de trabalho',
@@ -115,7 +115,7 @@ export const servicos = [
       ['Declarar imposto ajuda?', 'Muito. Tax Returns em dia comprovam sua renda e são exigidos pela maioria dos credores.'],
     ],
     fontes: [
-      ['CFPB — Empréstimos e crédito', 'https://www.consumerfinance.gov/consumer-tools/'],
+      ['CFPB: Empréstimos e crédito', 'https://www.consumerfinance.gov/consumer-tools/'],
     ],
     whats: 'Olá! Gostaria de informações sobre empréstimos.',
   },
@@ -123,12 +123,12 @@ export const servicos = [
     slug: 'seguros',
     foto: 'Pai sorrindo com os dois filhos em frente de casa',
     nome: 'Seguros',
-    resumo: 'Seguro de carro, casa, vida e empresa — incluindo General Liability e Workers’ Comp para construção.',
+    resumo: 'Seguro de carro, casa, vida e empresa, incluindo General Liability e Workers’ Comp para construção.',
     icone: '<path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>',
     titulo: 'Seguros para você, sua família e sua empresa',
     lead: 'Cotamos com diferentes seguradoras e explicamos a apólice em português. Para empresas de construção, cuidamos do General Liability e do Workers’ Comp que os contratantes exigem.',
     inclui: [
-      'Seguro de carro (auto) — pessoal e comercial',
+      'Seguro de carro (auto), pessoal e comercial',
       'Seguro residencial e de aluguel (renters)',
       'Seguro de vida',
       'General Liability (responsabilidade civil) para empresas',
@@ -143,7 +143,7 @@ export const servicos = [
     prazos: [
       ['Seguro de carro é obrigatório', 'Na Geórgia, todo veículo precisa de seguro contínuo com, no mínimo, cobertura 25/50/25: $25 mil por pessoa ferida, $50 mil por acidente e $25 mil de danos à propriedade.'],
       ['Workers’ Comp na Geórgia', 'Empresas com 3 ou mais funcionários (incluindo meio período) são obrigadas a ter seguro de acidente de trabalho.'],
-      ['Atenção, contratante', 'Se você contrata subcontratado sem Workers’ Comp, a lei da Geórgia pode tornar a sua empresa responsável pelos funcionários dele — e a seguradora cobra isso na auditoria.'],
+      ['Atenção, contratante', 'Se você contrata subcontratado sem Workers’ Comp, a lei da Geórgia pode tornar a sua empresa responsável pelos funcionários dele, e a seguradora cobra isso na auditoria.'],
     ],
     documentos: ['Driver license', 'Dados do veículo (VIN) ou do imóvel', 'Para empresas: dados da LLC, atividade, folha de pagamento estimada e subcontratados'],
     faq: [
@@ -164,10 +164,10 @@ export const servicos = [
     resumo: 'Abra sua LLC na Geórgia e mantenha tudo em dia: EIN, Registered Agent e Annual Registration.',
     icone: '<path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6M4 21h16"/>',
     titulo: 'Abra e mantenha sua empresa em dia na Geórgia',
-    lead: 'Cuidamos da abertura da sua LLC e de tudo que vem depois, para sua empresa ficar 100% regular — sem multa, sem bloqueio e com Good Standing para fechar contratos.',
+    lead: 'Cuidamos da abertura da sua LLC e de tudo que vem depois, para sua empresa ficar 100% regular: sem multa, sem bloqueio e com Good Standing para fechar contratos.',
     inclui: [
       'Abertura de LLC na Secretaria de Estado da Geórgia (Articles of Organization)',
-      'EIN — o número fiscal da empresa no IRS',
+      'EIN, o número fiscal da empresa no IRS',
       'Registered Agent com endereço físico na Geórgia',
       'Operating Agreement (contrato entre os sócios)',
       'Annual Registration todo ano, dentro do prazo',
@@ -180,7 +180,7 @@ export const servicos = [
     ],
     prazos: [
       ['Annual Registration: 1º de janeiro a 1º de abril', 'Toda LLC da Geórgia precisa renovar o registro todo ano nesse período. A taxa do estado é $50; depois de 1º de abril, há multa de $25.'],
-      ['Risco de dissolução', 'A empresa que não renova pode ser dissolvida administrativamente pelo estado — e aí perde o Good Standing e o direito de operar.'],
+      ['Risco de dissolução', 'A empresa que não renova pode ser dissolvida administrativamente pelo estado e, com isso, perde o Good Standing e o direito de operar.'],
       ['Registered Agent obrigatório', 'Toda LLC precisa manter um Registered Agent com endereço físico na Geórgia (não vale caixa postal) para receber documentos oficiais.'],
     ],
     documentos: ['Documento com foto dos sócios', 'Endereço da empresa', 'Nome desejado (e duas opções)', 'Atividade da empresa e divisão entre os sócios'],
@@ -190,8 +190,8 @@ export const servicos = [
       ['LLC paga imposto?', 'Depende do tipo. LLC de um sócio declara junto com o imposto pessoal (Schedule C); LLC com sócios declara pelo Form 1065. Veja nossa página de Tax.'],
     ],
     fontes: [
-      ['Georgia Secretary of State — Corporations Division', 'https://sos.ga.gov/corporations-division-georgia-secretary-states-office'],
-      ['IRS — Obter EIN', 'https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number'],
+      ['Georgia Secretary of State: Corporations Division', 'https://sos.ga.gov/corporations-division-georgia-secretary-states-office'],
+      ['IRS: Obter EIN', 'https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number'],
     ],
     whats: 'Olá! Quero abrir (ou regularizar) minha empresa.',
   },
@@ -229,8 +229,8 @@ export const servicos = [
       ['Perdi o prazo. E agora?', 'Quanto antes declarar, menores as multas e os juros. Fale com a gente e regularizamos os anos atrasados.'],
     ],
     fontes: [
-      ['IRS — ITIN', 'https://www.irs.gov/individuals/individual-taxpayer-identification-number'],
-      ['IRS — Prazos e extensão', 'https://www.irs.gov/filing/individuals/when-to-file'],
+      ['IRS: ITIN', 'https://www.irs.gov/individuals/individual-taxpayer-identification-number'],
+      ['IRS: Prazos e extensão', 'https://www.irs.gov/filing/individuals/when-to-file'],
     ],
     whats: 'Olá! Preciso de ajuda com Tax Return / ITIN.',
   },
@@ -246,7 +246,7 @@ export const servicos = [
       'Avaliação: se a sua empresa precisa ou não de USDOT',
       'Registro do USDOT Number na FMCSA',
       'Renovação obrigatória a cada 2 anos (Biennial Update / MCS-150)',
-      'UCR — registro anual para quem cruza a divisa do estado',
+      'UCR: registro anual para quem cruza a divisa do estado',
       'Organização dos arquivos dos motoristas (Driver Qualification File e cartão médico)',
       'Preparação e acompanhamento de auditorias do DOT',
     ],
@@ -261,17 +261,17 @@ export const servicos = [
       ['UCR anual', 'Empresas que transportam o próprio material e equipamento para outros estados também precisam fazer o UCR todo ano (abre em 1º de outubro).'],
       ['Auditoria de empresa nova', 'Empresas novas que rodam entre estados passam por uma auditoria de segurança da FMCSA nos primeiros 12 meses. Arquivos de motoristas, manutenção e seguro precisam estar em ordem.'],
     ],
-    documentos: ['Dados da empresa (LLC e EIN)', 'Dados dos veículos e trailers (VIN, placas e peso — GVWR)', 'Driver license dos motoristas', 'Seguro dos veículos'],
+    documentos: ['Dados da empresa (LLC e EIN)', 'Dados dos veículos e trailers (VIN, placas e peso/GVWR)', 'Driver license dos motoristas', 'Seguro dos veículos'],
     faq: [
       ['Minha caminhonete precisa de DOT?', 'Depende do peso somado da caminhonete com o trailer (GVWR/GCWR). Se passar de 10.000 lbs, na Geórgia normalmente precisa. Avaliamos com os dados do seu veículo.'],
       ['Preciso de MC Number?', 'Normalmente não. O MC é para quem transporta carga de terceiros por pagamento. Quem leva o próprio material e equipamento costuma precisar só do USDOT.'],
       ['Preciso de CDL?', 'A CDL (carteira comercial) só é exigida a partir de 26.001 lbs ou em casos específicos. Abaixo disso, o motorista precisa de driver license normal e, entre estados, do cartão médico do DOT.'],
-      ['Meu USDOT foi desativado. E agora?', 'Dá para reativar fazendo a atualização do MCS-150. Não rode com o número desativado — fale com a gente.'],
+      ['Meu USDOT foi desativado. E agora?', 'Dá para reativar fazendo a atualização do MCS-150. Não rode com o número desativado. Fale com a gente.'],
     ],
     fontes: [
-      ['FMCSA — Preciso de USDOT?', 'https://www.fmcsa.dot.gov/registration/do-i-need-usdot-number'],
-      ['FMCSA — Biennial Update (MCS-150)', 'https://www.fmcsa.dot.gov/registration/updating-your-registration'],
-      ['UCR — Unified Carrier Registration', 'https://plan.ucr.gov/'],
+      ['FMCSA: Preciso de USDOT?', 'https://www.fmcsa.dot.gov/registration/do-i-need-usdot-number'],
+      ['FMCSA: Biennial Update (MCS-150)', 'https://www.fmcsa.dot.gov/registration/updating-your-registration'],
+      ['UCR: Unified Carrier Registration', 'https://plan.ucr.gov/'],
     ],
     whats: 'Olá! Preciso de ajuda com o DOT da minha empresa.',
   },
@@ -297,7 +297,7 @@ export const servicos = [
       ['Acompanhamos', 'Respondemos junto com você até o fim.'],
     ],
     prazos: [
-      ['Por que a seguradora audita?', 'O valor do seguro é cobrado por uma estimativa. No fim da apólice, a seguradora confere a folha de pagamento real e ajusta o valor — para mais ou para menos.'],
+      ['Por que a seguradora audita?', 'O valor do seguro é cobrado por uma estimativa. No fim da apólice, a seguradora confere a folha de pagamento real e ajusta o valor, para mais ou para menos.'],
       ['O erro mais caro', 'Pagamentos a subcontratados sem certificado de seguro (COI) válido costumam ser tratados como se fossem seus funcionários. Resultado: cobrança extra de Workers’ Comp e General Liability.'],
       ['Prazo conta', 'Auditorias e cartas do IRS têm prazo para resposta. Não responder pode virar cobrança automática.'],
     ],
@@ -308,7 +308,7 @@ export const servicos = [
     ],
     fontes: [
       ['Georgia State Board of Workers’ Compensation', 'https://sbwc.georgia.gov/'],
-      ['IRS — Entendendo sua carta do IRS', 'https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter'],
+      ['IRS: Entendendo sua carta do IRS', 'https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter'],
     ],
     whats: 'Olá! Recebi um aviso de auditoria e preciso de ajuda.',
   },
@@ -336,14 +336,14 @@ export const servicos = [
       ['Business License', 'Além da LLC no estado, a maioria das cidades e condados da Geórgia exige uma Business License (licença de funcionamento) renovada todo ano.'],
       ['Separe as contas', 'Misturar dinheiro pessoal e da empresa dificulta a declaração de imposto e as auditorias, e pode enfraquecer a proteção da LLC.'],
     ],
-    documentos: ['Nada para começar — só marcar uma conversa'],
+    documentos: ['Nada para começar, só marcar uma conversa'],
     faq: [
       ['Atendem empresas de qualquer área?', 'Sim, com bastante experiência em construção, serviços e pequenos negócios.'],
       ['Já tenho empresa. Vale a pena?', 'Sim. Muitos clientes chegam com a empresa aberta, mas com renovações, impostos ou seguros atrasados. Colocamos tudo em dia.'],
     ],
     fontes: [
       ['Georgia Secretary of State', 'https://sos.ga.gov/corporations-division-georgia-secretary-states-office'],
-      ['SBA — Small Business Administration', 'https://www.sba.gov/'],
+      ['SBA: Small Business Administration', 'https://www.sba.gov/'],
     ],
     whats: 'Olá! Gostaria de uma consultoria para o meu negócio.',
   },

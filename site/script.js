@@ -41,7 +41,7 @@ if (form) form.addEventListener('submit', e => {
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
 });
 
-// Cotação do dólar ao vivo (referência comercial USD/BRL — AwesomeAPI)
+// Cotação do dólar ao vivo (referência comercial USD/BRL, AwesomeAPI)
 const quote = document.querySelector('[data-quote]');
 if (quote) {
   const fmt = new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -58,7 +58,7 @@ if (quote) {
       const change = parseFloat(q.pctChange);
       const prev = valueEl.textContent;
       valueEl.textContent = 'R$ ' + fmt.format(parseFloat(q.bid));
-      if (prev !== valueEl.textContent && prev !== 'R$ —') {
+      if (prev !== valueEl.textContent && prev !== 'R$ ...') {
         valueEl.classList.remove('is-flash'); void valueEl.offsetWidth; valueEl.classList.add('is-flash');
       }
       changeEl.textContent = (change >= 0 ? '▲ ' : '▼ ') + pct.format(change) + '%';
