@@ -403,7 +403,15 @@ p { margin: 0 0 1em; }
 .quote__inner { display: flex; align-items: center; gap: 14px; height: 38px; white-space: nowrap; overflow: hidden; }
 .quote__live {
   width: 8px; height: 8px; border-radius: 50%; background: #25d366; flex: none;
-  animation: wa-pulse 1.8s ease-out infinite;
+  position: relative;
+}
+.quote__live::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%; background: #25d366;
+  animation: dot-ping 1.8s ease-out infinite;
+}
+@keyframes dot-ping {
+  0%   { transform: scale(1); opacity: .7; }
+  80%, 100% { transform: scale(2.6); opacity: 0; }
 }
 .quote__pair { font-weight: 500; }
 .quote__pair small { color: #8fa3b8; margin-left: 4px; }
@@ -562,3 +570,4 @@ p { margin: 0 0 1em; }
   .wa-float { width: 54px; height: 54px; right: 14px; bottom: 14px; }
   .wa-float svg { width: 26px; height: 26px; }
 }
+@media (prefers-reduced-motion: reduce) { .quote__live::after { animation: none; opacity: 0; } }
